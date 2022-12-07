@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:map/pages/home.dart';
 
 class Mapa extends StatefulWidget {
   const Mapa({Key? key}) : super(key: key);
@@ -35,18 +36,31 @@ class _MapState extends State<Mapa> {
 
   _carregarMarcadores() {
     Set<Marker> marcadoresLocal = {};
-    Marker marcadorIfpi = Marker(
-      markerId: MarkerId('IFPI'),
-      position: LatLng(-5.088544046019581, -42.81123803149089),
-      infoWindow: InfoWindow(title: 'IFPI CAMPUS TERESINA CENTRAL'),
+    Marker marcadorThiago = Marker(
+      markerId: MarkerId('Thiago'),
+      position: LatLng(-5.024776, -42.805268),
+      infoWindow: InfoWindow(title: 'Thiago'),
     );
-    Marker marcadorIfpiSul = Marker(
-      markerId: MarkerId('IFPI SUL'),
-      position: LatLng(-5.101723, -42.813114),
-      infoWindow: InfoWindow(title: "IFPI CAMPUS ZONA SUL")
+    Marker marcadorTadeu = Marker(
+      markerId: MarkerId('Tadeu'),
+      position: LatLng(-5.18655478888011, -42.750673059643375),
+      infoWindow: InfoWindow(title: "Tadeu")
     );
-    marcadoresLocal.add(marcadorIfpi);
-    marcadoresLocal.add(marcadorIfpiSul);
+    Marker marcadorEva = Marker(
+      markerId: MarkerId('Eva'),
+      position: LatLng(-5.096157048548517, -42.811067261834815),
+      infoWindow: InfoWindow(title: "Eva")
+    );
+    Marker marcadorPedro = Marker(
+      markerId: MarkerId('Pedro'),
+      position: LatLng(-5.18655478888011, -42.750673059643375),
+      infoWindow: InfoWindow(title: "Pedro")
+    );
+    marcadoresLocal.add(marcadorThiago);
+    marcadoresLocal.add(marcadorTadeu);
+    marcadoresLocal.add(marcadorEva);
+    marcadoresLocal.add(marcadorPedro);
+
     setState(() {
       _marcadores = marcadoresLocal;
     });
@@ -95,9 +109,21 @@ class _MapState extends State<Mapa> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Nogg Mapa'),
-          backgroundColor: Colors.green[400],
-        ),
+        title: Text('Mapa'),
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: const Icon(Icons.arrow_back),
+              onPressed: () { 
+                Navigator.pushReplacement(
+                  context, 
+                  MaterialPageRoute(builder: (context) => Home())
+                );
+              }
+            );
+          }
+        )
+      ),
         body: GoogleMap(
           mapType: MapType.hybrid,
           myLocationEnabled: true,
@@ -107,6 +133,7 @@ class _MapState extends State<Mapa> {
             zoom: 14.0,
           ),
           markers: _marcadores,
+
         ),
       );    
   }

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "413101648118",
+    "project_id": "map-ifpi",
+    "storage_bucket": "map-ifpi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413101648118:android:b9e87c0de50c510d7e64d7",
+        "android_client_info": {
+          "package_name": "com.example.map"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413101648118-v09tassn07ll474flcpe1uan07lithhd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3GyEevnh0d2ZCTFVQIGpicUdJWuOHCNk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413101648118-v09tassn07ll474flcpe1uan07lithhd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
