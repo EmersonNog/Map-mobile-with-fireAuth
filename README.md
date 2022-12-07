@@ -6,6 +6,6 @@ Projeto de conclusão de disciplina: Desenvolvimento mobile - Flutter
 
 Essa é uma aplicação flutter com autenticação e cadastro de usuário com uma API do google maps
 
-Documentação
+Documentação do framework Flutter
 
-- [Documentação do flutter: ](https://docs.flutter.dev/get-started/codelab)
+- [Documentação do flutter](https://docs.flutter.dev/get-started/codelab)
