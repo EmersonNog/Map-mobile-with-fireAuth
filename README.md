@@ -1,16 +1,12 @@
 # map
 
-A new Flutter project.
+Projeto de conclusão de disciplina: Desenvolvimento mobile - Flutter
 
-## Getting Started
+## Vamos lá
 
-This project is a starting point for a Flutter application.
+Essa é uma aplicação flutter com autenticação e cadastro de usuário com uma API do google maps
 
 A few resources to get you started if this is your first Flutter project:
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
